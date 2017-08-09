@@ -1,0 +1,88 @@
+<br><br>
+<div class="container">
+  
+  <md-card style="display: block ;width: 650px; height: 550px">
+    <div>
+        <a href="#barChart" (click)="barChart()">Bar Chart</a> &nbsp;&nbsp;&nbsp;  
+        <a href="#pieChart" (click)="pieChart()">Pie Chart</a> &nbsp;&nbsp;&nbsp;  
+        <a href="#doughnutChart" (click)="doughnutChart()">Doughnut Chart</a> &nbsp;&nbsp;&nbsp;  
+        <a href="#polarChart" (click)="polarChart()">Polar Chart</a> &nbsp;&nbsp;&nbsp;  
+        <a href="#radarChart" (click)="radarChart()">Radar Chart</a> &nbsp;&nbsp;&nbsp;  
+        <a href="#lineChart" (click)="lineChart()">Line Chart</a> &nbsp;&nbsp;&nbsp;  
+    </div>
+    
+    <!--Code for Bar Chart  -->
+    <div  *ngIf="barshow" id="barChart" style="display: block; width: 600px; height: 500px;">
+      <h1>Bar Chart</h1><br>
+      <canvas baseChart 
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              (chartHover)="barHovered($event)"
+              (chartClick)="barClicked($event)"></canvas>
+    </div>
+
+    <!--Code for pie chart  -->
+    <div  *ngIf="paishow" id="pieChart" style="display: block ;width: 400px; height: 300px;">
+      <h1>Pie Chart</h1><br>
+        <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            (chartHover)="pieHovered($event)"
+            (chartClick)="pieClicked($event)"></canvas>
+    </div>
+
+
+    <!--Code for Doughnut chart  -->
+    <div  *ngIf="nutshow" id="donughnutChart" style="display: block ;width: 400px; height: 300px;">
+      <h1>DoughNut Chart</h1><br>
+    <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              (chartHover)="doChartHovered($event)"
+              (chartClick)="doChartClicked($event)"></canvas>
+    </div>
+
+    <!--Code for Polar Chart  -->
+     <div  *ngIf="polshow" id="polarChart" style="display: block ;width: 400px; height: 300px;">
+      <h1>Polar Chart</h1><br>
+        <canvas baseChart
+          [data]="polarAreaChartData"
+          [labels]="polarAreaChartLabels"
+          [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType"
+          (chartHover)="polarChartHovered($event)"
+          (chartClick)="polarChartClicked($event)"></canvas>
+    </div>
+
+    <!--Code for Radar Chart  -->
+     <div  *ngIf="radarshow" id="radarChart" style="display: block ;width: 400px; height: 300px;">
+      <h1>Radar Chart</h1><br>
+        <canvas baseChart
+          [datasets]="radarChartData"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType"
+          (chartHover)="radarChartHovered($event)"
+          (chartClick)="radarChartClicked($event)"></canvas>
+    </div>
+
+    <!--Code for Base chart  -->
+    <div  *ngIf="lineshow" id="lineChart" style="display: block ;width: 400px; height: 300px;">
+      <h1>Line Chart</h1>
+       <canvas baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="lineChartHovered($event)"
+                (chartClick)="linechartClicked($event)"></canvas>
+    </div>
+
+
+  </md-card>
+</div>

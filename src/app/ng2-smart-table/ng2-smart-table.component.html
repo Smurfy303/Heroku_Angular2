@@ -1,0 +1,16 @@
+<div class="container">
+
+<md-card class="container">
+<md-toolbar color="accent">
+  <span> Add DATA</span>
+  <span fxFlex></span>
+  <button md-icon-button (click)="addData()">
+    <md-icon>person_add</md-icon>
+  </button>
+</md-toolbar><br>
+  
+  <ng2-smart-table  [settings]="settings" [source]="data" align=center (delete)="onDeleteConfirm($event)"
+      (edit)="EditConfirm($event)"></ng2-smart-table>
+  </md-card>
+  
+</div>

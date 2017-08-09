@@ -1,0 +1,17 @@
+{
+  "name": "angular2-bower",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Kiran <kiran.devkar@flowian.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

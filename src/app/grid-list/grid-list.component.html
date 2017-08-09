@@ -1,0 +1,27 @@
+
+<br><br>
+<div class="container">
+  <!-- <div fxLayout="row" fxLayoutWrap >     -->
+<!-- <md-grid-list cols="2" md-cols-sm="2" md-cols-md="4" md-cols-lg="8" md-cols-gt-lg="12"
+ md-rows-sm="2" md-rows-md="4" md-rows-lg="8" md-rows-gt-lg="12"
+ rowHeight="100px" gutterSize="20px">
+  <md-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    {{tile.text}}
+  </md-grid-tile>
+</md-grid-list> -->
+  <!-- </div> -->
+
+  <!-- <md-card (window:resize)="onResize($event)" > -->
+
+  <md-grid-list [cols]="cols | async"  rowHeight="420px" gutterSize="30px">
+     <md-grid-tile  *ngFor="let tile of tiles" [style.background]="tile.color">
+    {{tile.text}}
+  </md-grid-tile>
+ </md-grid-list>
+
+<!-- </md-card> -->
+</div>

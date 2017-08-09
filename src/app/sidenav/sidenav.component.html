@@ -1,0 +1,60 @@
+<br><br>
+<div class="container">
+<md-sidenav-container fullscreen>
+  <md-sidenav #sidenav mode="push" class="example-sidenav">
+
+    <md-toolbar color="primary">
+        <span fxFlex></span>  
+        <button md-icon-button (click)="sidenav.close()"><md-icon>arrow_back</md-icon></button>
+      <!--<button md-mini-fab (click)="backClick()"><md-icon class="icon-20">arrow_back</md-icon></button>-->
+    </md-toolbar>
+    
+      <md-list-item>
+				 <button md-button class="sidenav-button" (click)="sidenav.close()">
+          <md-icon class="icon-30">home</md-icon><span>&nbsp;&nbsp;</span>Home</button>
+      </md-list-item>
+      
+      <md-list-item>
+        <button md-button class="sidenav-button" > 
+        <md-icon class="icon-30">create</md-icon>&nbsp;&nbsp;Dashboard</button>
+      </md-list-item>
+  
+    <md-list-item>
+        <button md-button class="sidenav-button" > 
+        <md-icon class="icon-30">create</md-icon>&nbsp;&nbsp;Feedback</button>
+      </md-list-item>
+  </md-sidenav>
+
+  <md-toolbar color="primary" [hidden]="hideHeader" positon="overflow">
+    <button md-icon-button class="icon-20" (click)="sidenav.open()">
+      <md-icon>menu</md-icon>
+    </button>
+      <span fxFlex></span>
+    <button md-icon-button [mdMenuTriggerFor]="person">
+    <md-icon>person</md-icon>
+  </button>
+    <md-menu #person="mdMenu">
+			<button md-menu-item >
+			<md-icon>edit</md-icon>
+			<span>Edit Profile</span>
+			</button>
+			<button md-menu-item >
+			<md-icon>security</md-icon>
+			<span>Change Password</span>
+			</button>
+			<button md-menu-item>
+			<md-icon>lock</md-icon>
+			<span>Logout</span>
+			</button>
+
+		</md-menu> 
+  </md-toolbar>
+
+  <!-- <div class="example-sidenav-content">
+    <button type="button" md-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+  </div> -->
+
+</md-sidenav-container>
+</div>
